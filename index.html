@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super ChangoNAPA</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/carrusel.css">
+</head>
+<body>
+    <div class="encabezado">
+        La tienda online de ChangoNAPA
+    </div>
+
+    <div class="selecciona">
+        <a href="index.html">
+            <h4 class="logo">ChangoNAPA</h4>
+        </a>
+        <a href="productos.html" class="button-link">
+            <button class="productos">Productos</button>
+        </a>
+        <a href="formulario.html" class="button-link">
+            <button class="formulario">Contacto</button>
+        </a>
+    </div>
+
+
+        <section>
+            <div class="ofertas">
+                <div>
+                    <a><img src="img/fotoSuper.png" alt="Oferta 1"></a>
+                    <p>Promo 3 x 2 en productos seleccionados</p>
+                </div>
+                <div>
+                    <a><img src="img/fotoVerduleria.png" alt="Oferta 2"></a>
+                    <p>15% OFF en verduleria desde el 25/07 al 05/08</p>
+                </div>
+            </div>
+            <div class='historia'>
+                <aside></aside>
+            </div>
+            <div class='imagenes'></div>
+        </section>
+
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="productos.html"><img src="img/imagen1.jpg" alt="Oferta 1"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="productos.html"><img src="img/imagen2.jpg" alt="Oferta 2"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="productos.html"><img src="img/imagen3.jpg" alt="Oferta 3"></a>
+                </div>
+            </div>
+            <button class="carousel-control prev">&lt;</button>
+            <button class="carousel-control next">&gt;</button>
+        </div>
+
+    <footer>
+        <p>ChangoNAPA Online Copyright © 2024 - Todos los derechos reservados.</p>
+        <p>ChangoNAPA SA. CUIT 30-0055445566-96 . Republica del Libano 0088 . Olavarria</p>
+    </footer>
+
+    <script src="js/carrusel.js"></script>
+    <script>
+        const currentFile = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.button-link button');
+        navLinks.forEach(link => {
+            if (link.parentElement.getAttribute('href') === currentFile) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

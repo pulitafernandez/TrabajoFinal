@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="encabezado">
+        La tienda online de ChangoNAPA
+    </div>
+
+    <div class="selecciona">
+        <a href="index.html">
+            <h4 class="logo">ChangoNAPA</h4>
+        </a>
+        <a href="productos.html" class="button-link">
+            <button class="productos">Productos</button>
+        </a>
+        <a href="formulario.html" class="button-link">
+            <button class="formulario">Contacto</button>
+        </a>
+    </div>
+
+    <div class="content">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contacto</h2>
+                <p><strong>Email:</strong> pfernandez@coopelectric.com.ar</p>
+                <p><strong>Dirección:</strong> Belgrano 2850, Olavarria, Buenos Aires</p>
+                <p><strong>Teléfono:</strong> 2284035555</p>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+                    <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
+                    <input type="text" name="telefono" id="telefono" placeholder="Teléfono" required>
+                    <textarea name="mensaje" id="mensaje" placeholder="Mensaje" required></textarea>
+                    <button type="submit" id="enviar" disabled>Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>ChangoNAPA Online Copyright © 2024 - Todos los derechos reservados.</p>
+        <p>ChangoNAPA SA. CUIT 30-0055445566-96 . Republica del Libano 0088 . Olavarria</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="js/formulario.js"></script>
+
+    <script>
+        const currentFile = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.button-link button');
+        navLinks.forEach(link => {
+            if (link.parentElement.getAttribute('href') === currentFile) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

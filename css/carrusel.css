@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilos del contenedor principal del carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: none; 
+    border-radius: 0;
+    margin: 0; 
+    padding: 0;
+}
+
+/* Estilos del contenedor interno del carrusel */
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos de los elementos del carrusel */
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 2s ease;
+    z-index: 0;
+}
+
+/* Estilos de las imágenes dentro de los elementos del carrusel */
+.carousel-item img {
+    display: block;
+    width: 100%;
+    height: 400px;
+}
+
+/* Estilos de los elementos activos del carrusel */
+.carousel-item.active {
+    opacity: 1;
+    z-index: 0;
+}
+
+/* Estilos de los controles del carrusel */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* Estilos del control previo del carrusel */
+.carousel-control.prev {
+    left: 10px;
+}
+
+/* Estilos del control siguiente del carrusel */
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Muestra los controles al pasar el ratón sobre el carrusel */
+.carousel:hover .carousel-control {
+    opacity: 1;
+}

@@ -2,27 +2,21 @@ body {
     padding: 5px;
     margin: 0;
     font-family: Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
-
+/* Estilo para el encabezado */
 .encabezado {
     background-color: #08c3f1;
     width: 100%;
     text-align: center;
     color: #ffffff;
     font-family: Verdana;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 10px 0;
 }
 
+/* Estilo para los menues */
 .selecciona {
     background-color: #FAFAFA;
     width: 100%;
-    text-align: center;
     font-family: Verdana;
     display: flex;
     justify-content: center;
@@ -31,15 +25,17 @@ body {
 }
 
 .selecciona a {
-    text-decoration: none;
+    text-decoration: none; /* Elimina el subrayado de ChangoNapa */
 }
 
+/* Estilo para el ChangoNapa */
 .logo {
     color: #5C6AC4;
     margin: 0 20px;
     cursor: pointer;
 }
 
+/* Estilo para los botones de productos y formulario */
 .productos, .formulario {
     background-color: #08c3f1;
     padding: 10px 20px;
@@ -50,59 +46,20 @@ body {
     margin: 0 10px;
 }
 
+/* Estilos para los elementos activos */
 .productos.active, .formulario.active, .logo.active {
     background-color: #17ecda;
 }
 
-.content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-}
-
+/* Estilos para el titulo */
 h1 {
     text-align: center;
     color: #5C6AC4;
     margin-bottom: 20px;
 }
 
-#product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    background-color: #FAFAFA;
-    padding: 10px 0;
-}
-
-.product {
-    background-color: #08c3f1;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.product input {
-    width: 50px;
-    margin-top: 10px;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-}
-
-button {
+/* Estilos para el boton comprar */
+Button {
     background-color: #08c3f1;
     color: #ffffff;
     border: none;
@@ -114,23 +71,12 @@ button {
     margin: 20px auto;
 }
 
+/* Estilos para cuando se pasa por encima al boton comprar */
 button:hover {
     background-color: #17ecda;
 }
 
-#error {
-    color: red;
-    text-align: center;
-    margin-top: 20px;
-}
-
-#total {
-    color: green;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
+/* Estilo para el pie de página */
 footer {
     background-color: #08c3f1;
     color: #ffffff;

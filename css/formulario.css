@@ -2,27 +2,22 @@ body {
     padding: 5px;
     margin: 0;
     font-family: Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
+/* Estilo para el encabezado */
 .encabezado {
     background-color: #08c3f1;
     width: 100%;
     text-align: center;
     color: #ffffff;
     font-family: Verdana;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 10px 0;
 }
 
+/* Estilo para los menues */
 .selecciona {
     background-color: #FAFAFA;
     width: 100%;
-    text-align: center;
     font-family: Verdana;
     display: flex;
     justify-content: center;
@@ -31,15 +26,17 @@ body {
 }
 
 .selecciona a {
-    text-decoration: none;
+    text-decoration: none; /* Elimina el subrayado de ChangoNapa */
 }
 
+/* Estilo para el ChangoNapa */
 .logo {
     color: #5C6AC4;
     margin: 0 20px;
     cursor: pointer;
 }
 
+/* Estilo para los botones de productos y formulario */
 .productos, .formulario {
     background-color: #08c3f1;
     padding: 10px 20px;
@@ -50,19 +47,19 @@ body {
     margin: 0 10px;
 }
 
+/* Estilos para los elementos activos */
 .productos.active, .formulario.active, .logo.active {
     background-color: #17ecda;
 }
 
+/* Estilo para el contenedor principal */
 .content {
-    flex: 1;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 20px 0;
 }
 
+/* Estilo para el contenedor de contacto */
 .contact-container {
     background-color: white;
     padding: 20px;
@@ -70,25 +67,27 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    max-width: 800px;
     margin-top: 20px;
 }
 
+/* Estilo para la informacion de contacto  */
 .contact-info {
     margin-right: 20px;
 }
 
+/* Estilo para los encabezados */
 .contact-info h2 {
     margin-top: 0;
     color: #009688;
 }
 
+/* Estilo para el formulario */
 .contact-form form {
     display: flex;
     flex-direction: column;
 }
 
+/* Estilo para los campos rellenables y area de texto dentro del formulario */
 .contact-form input, .contact-form textarea {
     margin-bottom: 10px;
     padding: 10px;
@@ -96,6 +95,7 @@ body {
     border-radius: 4px;
 }
 
+/* Estilo para el boton enviar*/
 .contact-form button {
     padding: 10px;
     background-color: #009688;
@@ -106,10 +106,12 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Estilo para el boton cuando el mouse pasa por encima*/
 .contact-form button:hover {
     background-color: #00796b;
 }
 
+/* Estilo para el enviar deshabilitado */
 .contact-form button:disabled {
     background-color: #b2dfdb;
     color: #757575;
@@ -117,13 +119,14 @@ body {
     opacity: 0.6;
 }
 
+/* Estilo para el pie de página */
 footer {
     background-color: #08c3f1;
     color: #ffffff;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px;
+    padding: 10px 0;
     width: 100%;
     position: relative;
     bottom: 0;

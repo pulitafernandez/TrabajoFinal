@@ -89,3 +89,13 @@ footer {
     bottom: 0;
     height: 20px;
 }
+
+#productos-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: column;
+}
+
+#nombreProduc{
+    color: #5C6AC4;
+}

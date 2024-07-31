@@ -90,12 +90,26 @@ footer {
     height: 20px;
 }
 
-#productos-container{
+#product-container{
     display: flex;
     justify-content: space-around;
     align-items: column;
 }
 
-#nombreProduc{
+#nameProduct{
     color: #5C6AC4;
+    font-size: medium;
+}
+
+#error {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#total {
+    color: green;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
 }

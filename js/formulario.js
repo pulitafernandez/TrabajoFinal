@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnEnviar.addEventListener("click", (e) => {
         // Previene la actualización de la página al enviar el formulario
-        e.preventDefault(); 
+        //e.preventDefault(); 
         
         let nombre = document.getElementById('nombre');
         let apellido = document.getElementById('apellido');

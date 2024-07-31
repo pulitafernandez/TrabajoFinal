@@ -7,6 +7,7 @@ body {
     min-height: 100px;
 }
 
+
 /* Estilo para el encabezado */
 .encabezado {
     background-color: #08c3f1;
@@ -61,6 +62,32 @@ body {
 .ofertas,p{
     text-align: center;
 }
+/* Estilo para historia */
+.history{
+    background-color: rgb(170, 214, 252);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.history, p{
+    margin-top: 10px;
+    color:#0f1648;
+}
+.historia{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.historiaInicio{
+    width: 400px;
+    text-align: center;
+}
+
+.historiaFin{
+    width: 400px;
+    text-align: center;
+}
 
 /* Estilos para los elementos activos */
 .productos.active, .formulario.active, .logo.active {
@@ -79,4 +106,5 @@ footer {
     position: relative;
     bottom: 0;
     height: 20px;
+    margin-top: 20px;
 }

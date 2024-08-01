@@ -1,9 +1,9 @@
 const products = [
-    { id:1, name: "Aceite de girasol Cocinero 1.5 l.", price: 1949, image: "img/aceite.jpg", stock: 25 },
-    { id:2, name: "Fideos mostacholes Luchetti 500gr.", price: 1600, image: "img/fideos.jpg", stock: 20 },
-    { id:3, name: "Mayonesa Hellmann's 475gr.", price: 1555, image: "img/mayonesa.jpg", stock: 15 },
-    { id:4, name: "Harina Pureza p/ Pizza 1kg.", price: 1429, image: "img/harina.jpg", stock: 10 },
-    { id:5, name: "Arroz Gallo 500gr.", price: 1575, image: "img/arroz.jpg", stock: 5 }
+    { id:1, name: "Aceite de oliva Don Bosco 1 l.", price: 1949, image: "img/aceite.png", stock: 25 },
+    { id:2, name: "Fideos mostacholes Luchetti 500gr.", price: 1600, image: "img/fideos.png", stock: 20 },
+    { id:3, name: "Mayonesa Hellmann's 475gr.", price: 1555, image: "img/mayonesa.png", stock: 15 },
+    { id:4, name: "Harina Pureza Leudante 1kg.", price: 1429, image: "img/harina.png", stock: 10 },
+    { id:5, name: "Arroz Gallo 500gr.", price: 1575, image: "img/arroz.png", stock: 5 }
 ];
 
 /* pruebo mostrando por consola
@@ -40,6 +40,10 @@ function createProductElement(product){
     productImage.src = product.image;
     productImage.classList.add("product-image")
     
+    const productPrice = document.createElement("p");
+    productPrice.classList.add("price");
+    productPrice.id = `price-count-${product.id}`;
+    productPrice.textContent= `Precio: $${product.price}`;
 
     const stock = document.createElement("p");
     stock.classList.add("stock");
@@ -56,8 +60,10 @@ function createProductElement(product){
     //agrego los elementos al contenedor de productos
     productDiv.appendChild(productName);
     productDiv.appendChild(productImage);
+    productDiv.appendChild(productPrice);
     productDiv.appendChild(stock);
     productDiv.appendChild(quantityInput);
+   
 
     return productDiv;
 

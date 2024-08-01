@@ -106,6 +106,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: column;
+    flex-wrap: wrap; /*Permite que los elementos se acomoden en el ancho y caigan a la sig linea */
 }
 
 #nameProduct{
@@ -137,6 +138,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
+    margin-top: 10px;
 }
 
 /* Estilo para el campo de cantidad */

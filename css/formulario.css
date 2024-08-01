@@ -1,7 +1,14 @@
+html, body {
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    margin: 0;
+}
+
 body {
+    height: 100%;
     padding: 5px;
     margin: 0;
     font-family: Verdana, sans-serif;
+    display: flex;
 }
 
 /* Estilo para el encabezado */
@@ -57,6 +64,8 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px 0;
+    flex: 1;
+    
 }
 
 /* Estilo para el contenedor de contacto */
@@ -79,6 +88,8 @@ body {
 .contact-info h2 {
     margin-top: 0;
     color: #009688;
+    text-align: center;
+
 }
 
 /* Estilo para el formulario */
@@ -90,7 +101,8 @@ body {
 /* Estilo para los campos rellenables y area de texto dentro del formulario */
 .contact-form input, .contact-form textarea {
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 20px;
+    width: 300px;
     border: 1px solid #ddd;
     border-radius: 4px;
 }

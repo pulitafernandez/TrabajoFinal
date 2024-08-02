@@ -127,6 +127,13 @@ footer {
     margin-top: 20px;
 }
 
+#totalVacio {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
 /*Estilo para el contenedor de producto */
 .product {
     background-color: #77a8bb;

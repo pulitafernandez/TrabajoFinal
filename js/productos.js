@@ -113,7 +113,11 @@ function comprar() {
         mensajeDiv.innerHTML = `<p id="error">${error}</p>`;
     } 
     else {
-       mensajeDiv.innerHTML = `<p id="total">El total de su compra es $${total}</p>`;
+        if(total===0){
+            mensajeDiv.innerHTML = `<p id="totalVacio">Debe agregar algun producto para su compra.</p>`;
+        }else{
+            mensajeDiv.innerHTML = `<p id="total">El total de su compra es $${total}</p>`;
+        }
     }
 }
 

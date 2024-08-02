@@ -1,16 +1,11 @@
+// Declaracion de variables
 let currentIndex = 0;
-const carouselInner = document.querySelector('.carousel-inner');
 const items = document.querySelectorAll('.carousel-item');
 const totalItems = items.length;
 let intervalId;
 
-// Función para actualizar el tamaño del carrusel según la imagen actual
+// // ajusta la altura del carrusel con la imagen cargada
 function updateCarouselSize() {
-    const currentImage = items[currentIndex].querySelector('img');
-    currentImage.onload = () => {
-        const carousel = document.querySelector('.carousel');
-        carousel.style.height = currentImage.clientHeight + 'px';
-    };
     const currentImageLoaded = items[currentIndex].querySelector('img');
     if (currentImageLoaded.complete) {
         const carousel = document.querySelector('.carousel');
@@ -18,13 +13,13 @@ function updateCarouselSize() {
     }
 }
 
-// Función para mostrar la imagen en el índice especificado
+// Función para cambiar la imagen visible
 function showImage(index) {
-    items[currentIndex].classList.remove('active');
-    currentIndex = index;
-    items[currentIndex].classList.add('active');
+    items[currentIndex].classList.remove('active'); // Selecciona y elimina visiblemente la imagen
+    currentIndex = index; // actualiza la variable
+    items[currentIndex].classList.add('active');  // selecciona y visibiliza la nueva imagen
     updateCarouselSize();
-    resetInterval();
+    resetInterval(); // llama a la funcion para reiniciar el temporizador de transicion de imagen
 }
 
 // Función para mostrar la siguiente imagen
@@ -39,7 +34,7 @@ function showPrevImage() {
     showImage(prevIndex);
 }
 
-// Función para reiniciar el intervalo automático del carrusel después de una acción manual
+// Funcion para reiniciar el intervalo del carrusel despues de una accion manual
 function resetInterval() {
     clearInterval(intervalId);
     intervalId = setInterval(showNextImage, 4000);
@@ -49,7 +44,7 @@ function resetInterval() {
 document.querySelector('.next').addEventListener('click', showNextImage);
 document.querySelector('.prev').addEventListener('click', showPrevImage);
 
-// Inicializa el intervalo automático del carrusel
+// Inicializa el intervalo automatico del carrusel
 intervalId = setInterval(showNextImage, 4000); // Muestra la siguiente imagen cada 4 segundos
 
 // Configuración inicial al cargar la página

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Metadata y estilos -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- configurar vista para dispositivos moviles -->
     <title>Super ChangoNAPA</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/carrusel.css">
@@ -11,10 +12,10 @@
     <div class="encabezado">
         La tienda online de ChangoNAPA
     </div>
-
+    <!-- Barra de navegacion -->
     <div class="selecciona">
         <a href="index.html">
-            <h4 class="logo">ChangoNAPA</h4>
+            <h4 class="logo">ChangoNAPA</h4> <!-- Logo y enlace a la pagina principal -->
         </a>
         <a href="productos.html" class="button-link">
             <button class="productos">Productos</button>
@@ -23,45 +24,46 @@
             <button class="formulario">Contacto</button>
         </a>
     </div>
-
-        <div class="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <a href="productos.html"><img src="img/imageCarrusel1.png" alt="Oferta 1"></a>
-                </div>
-                <div class="carousel-item">
-                    <a href="productos.html"><img src="img/imageCarrusel2.png" alt="Oferta 2"></a>
-                </div>
+    <!-- Carrusel -->
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="productos.html"><img src="img/imageCarrusel1.png" alt="Oferta 1"></a>
             </div>
-            <button class="carousel-control prev">&lt;</button>
-            <button class="carousel-control next">&gt;</button>
-        </div>
-        <div class="history">
-            <h1>Nuestra historia</h1>
-            <div class='historia'>
-                <div class="historiaInicio">
-                    <h2>1989</h2>
-                    <p>El 14 de Septiembre se creo esta empresa familiar con el fin de darle a los usuarios la facilidad de comprar a precios super bajos</p>
-                </div>
-                <div class="historiaFin">
-                    <h2>2024</h2>
-                    <p>Actualmente, contamos con más de 200 empleados, y 3 sucursales. </p>
-                </div>
+            <div class="carousel-item">
+                <a href="productos.html"><img src="img/imageCarrusel2.png" alt="Oferta 2"></a>
             </div>
         </div>
-        <div class="ofertas">
-            <div>
-                <a><img src="img/fotoSuper.png" alt="Oferta 1"></a>
-                <p>Promo 3 x 2 en productos seleccionados</p>
+        <button class="carousel-control prev">&lt;</button> <!-- Boton para ir a la imagen anterior -->
+        <button class="carousel-control next">&gt;</button> <!-- Boton para ir a la siguiente imagen -->
+    </div> 
+    <!-- Historia -->   
+    <div class="history">
+        <h1>Nuestra historia</h1>
+        <div class='historia'>
+            <div class="historiaInicio">
+                <h2>1989</h2>
+                <p>El 14 de Septiembre se creo esta empresa familiar con el fin de darle a los usuarios la facilidad de comprar a precios super bajos</p>
             </div>
-            <div>
-                <a><img src="img/fotoVerduleria.png" alt="Oferta 2"></a>
-                <p>15% OFF en verduleria desde el 25/07 al 05/08</p>
+            <div class="historiaFin">
+                <h2>2024</h2>
+                <p>Actualmente, contamos con más de 200 empleados, y 3 sucursales. </p>
             </div>
         </div>
+    </div>
+    <!-- Ofertas -->
+    <div class="ofertas">
+        <div>
+            <a><img src="img/fotoSuper.png" alt="Oferta 1"></a>
+            <p>Promo 3 x 2 en productos seleccionados</p>
+        </div>
+        <div>
+            <a><img src="img/fotoVerduleria.png" alt="Oferta 2"></a>
+            <p>15% OFF en verduleria desde el 25/07 al 05/08</p>
+        </div>
+    </div>
             
            
-
     <footer>
         <p>ChangoNAPA Online Copyright © 2024 - Todos los derechos reservados.</p>
         <p>ChangoNAPA SA. CUIT 30-0055445566-96 . Republica del Libano 0088 . Olavarria</p>
@@ -69,6 +71,7 @@
 
     <script src="js/carrusel.js"></script>
     <script>
+        // Resalta el botón de navegación correspondiente a la página actual
         const currentFile = window.location.pathname.split('/').pop();
         const navLinks = document.querySelectorAll('.button-link button');
         navLinks.forEach(link => {

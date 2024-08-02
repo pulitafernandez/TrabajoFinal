@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Metadata y estilos -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- configurar vista para dispositivos moviles -->
     <title>Productos</title>
     <link rel="stylesheet" href="css/productos.css">
 </head>
@@ -10,7 +11,7 @@
     <div class="encabezado">
         La tienda online de ChangoNAPA
     </div>
-
+    <!-- Barra de navegacion -->
     <div class="selecciona">
         <a href="index.html">
             <h4 class="logo">ChangoNAPA</h4>
@@ -22,7 +23,7 @@
             <button class="formulario">Contacto</button>
         </a>
     </div>
-
+    <!-- Contenido principal de productos -->
     <h1>Lista de Productos</h1>
     <div id="product-container"></div>
     <button id="buttonComprar" onclick="comprar()">Comprar</button>
@@ -37,6 +38,7 @@
 
     <script src="js/productos.js"></script>
     <script>
+        // Resalta el botón de navegación correspondiente a la página actual
         const currentFile = window.location.pathname.split('/').pop();
         const navLinks = document.querySelectorAll('.button-link button');
         navLinks.forEach(link => {

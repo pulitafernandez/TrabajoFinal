@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Metadata y estilos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
@@ -12,9 +13,10 @@
         La tienda online de ChangoNAPA
     </div>
 
+     <!-- Barra de navegacion -->
     <div class="selecciona">
         <a href="index.html">
-            <h4 class="logo">ChangoNAPA</h4>
+            <h4 class="logo">ChangoNAPA</h4> <!-- Logo y enlace a la pagina principal -->
         </a>
         <a href="productos.html" class="button-link">
             <button class="productos">Productos</button>
@@ -33,13 +35,14 @@
                 <p><strong>Teléfono:</strong> 2284035555</p>
             </div>
             <div class="contact-form">
+                <!-- Formulario de contacto -->
                 <form id="contactForm">
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
                     <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
                     <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
                     <input type="text" name="telefono" id="telefono" placeholder="Teléfono" required>
                     <textarea name="mensaje" id="mensaje" placeholder="Mensaje" required></textarea>
-                    <button type="submit" id="enviar" disabled>Enviar</button>
+                    <button type="submit" id="enviar" disabled>Enviar</button> <!-- Boton para enviar el formulario, inicialmente deshabilitado -->
                 </form>
             </div>
         </div>
@@ -50,10 +53,11 @@
         <p>ChangoNAPA SA. CUIT 30-0055445566-96 . Republica del Libano 0088 . Olavarria</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script> <!-- Biblioteca para guardar el txt -->
     <script src="js/formulario.js"></script>
 
     <script>
+        // Resalta el botón de navegación correspondiente a la pagina actual
         const currentFile = window.location.pathname.split('/').pop();
         const navLinks = document.querySelectorAll('.button-link button');
         navLinks.forEach(link => {

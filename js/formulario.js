@@ -14,9 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
         input.addEventListener('input', checkFormValidity);
     });
 
+    
+
     btnEnviar.addEventListener("click", (e) => {
         // Previene la actualización de la página al enviar el formulario
-        //e.preventDefault(); 
+        e.preventDefault(); 
         
         let nombre = document.getElementById('nombre');
         let apellido = document.getElementById('apellido');
@@ -30,12 +32,23 @@ document.addEventListener('DOMContentLoaded', () => {
         `Email: ${email.value}\n` +
         `Telefono: ${telefono.value}\n` +
         `Mensaje: ${mensaje.value}`;
-        
-        // Mensaje pop up
-        alert(`Gracias ${nombre.value} ${apellido.value} por su contacto`);
-    
-        let blob = new Blob([informacion], {type: "text/plain;charset=utf-8"});
-        
-        saveAs(blob, 'contacto.txt');
+
+        // Mensaje pop up usando SweetAlert2
+        Swal.fire({
+            title: 'Gracias!',
+            text: ` Gracias ${nombre.value} ${apellido.value} por su contacto `,
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+        }).then(() => {
+            // Crea y guarda el archivo txt después de que el usuario cierre el pop-up
+            let blob = new Blob([informacion], {type: "text/plain;charset=utf-8"});
+            saveAs(blob, 'contacto.txt');
+            
+            // Vacía los campos del formulario
+            inputs.forEach(input => input.value = '');
+            
+            // Desactiva el botón de enviar nuevamente
+            btnEnviar.disabled = true;
+        });
     });
 });

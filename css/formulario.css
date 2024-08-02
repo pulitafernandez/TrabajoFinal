@@ -79,6 +79,7 @@ body {
     margin-top: 20px;
 }
 
+
 /* Estilo para la informacion de contacto  */
 .contact-info {
     margin-right: 20px;
@@ -88,7 +89,7 @@ body {
 .contact-info h2 {
     margin-top: 0;
     color: #009688;
-    text-align: center;
+    text-align: left;
 
 }
 

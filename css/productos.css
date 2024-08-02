@@ -150,3 +150,10 @@ footer {
     border-radius: 5px;
     align-self: center;
 }
+
+/* Ajusta el tamaño de las imagenes de los productos */
+.product img {
+    max-width: 100px; 
+    height: auto; 
+    margin: auto;
+}

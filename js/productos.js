@@ -56,6 +56,7 @@ function createProductElement(product){
     quantityInput.value= 0;
     quantityInput.classList.add("quantity");
     quantityInput.id= `quantity-input-${product.id}`;
+    quantityInput.addEventListener("input", validateInput);
 
     //agrego los elementos al contenedor de productos
     productDiv.appendChild(productName);
@@ -69,9 +70,22 @@ function createProductElement(product){
 
 }
 
+function validateInput(event) {
+    const quantityInput = event.target;
+    // Asegúrate de que el valor es un número
+    if (isNaN(quantityInput.value)) {
+        quantityInput.value = '';
+    }
+    // Si el valor es negativo, cámbialo a 0
+    if (quantityInput.value < 0) {
+        quantityInput.value = 0;
+    }
+}
+
 function comprar() {
     let total = 0; 
     let error = ''; 
+
 
     // trae la cantidad seleccionada por el usuario
     products.forEach((product) => {
@@ -80,7 +94,7 @@ function comprar() {
         // verifica si la cantidad es mayor que el stock disponible
         if (quantity > product.stock) {
         error += `No hay suficiente stock de ${product.name}. Disponible: ${product.stock}.<br>`;
-    } 
+        } 
         else {
         //calculo el total de la compra
         total += quantity * product.price;
@@ -89,6 +103,7 @@ function comprar() {
             product.stock -= quantity;
             document.getElementById(`stock-count-${product.id}`).textContent =  `Stock disponible: ${product.stock}`;
         }
+        
     }
 
     });

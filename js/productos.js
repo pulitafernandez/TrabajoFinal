@@ -68,6 +68,8 @@ function createProductElement(product){
 //Funcion que valida el contenido del input
 function validateInput(event) {
     const quantityInput = event.target;
+    // valida si el valor es un decimal
+    quantityInput.value = quantityInput.value.replace(/\D/g, '');
     // valida si el valor no es un número
     if (isNaN(quantityInput.value)) {
         quantityInput.value = '';
